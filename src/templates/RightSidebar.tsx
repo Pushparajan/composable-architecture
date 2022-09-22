@@ -26,9 +26,12 @@ const RightSidebar = (props: IMainProps) => (
           <SidebarBlock title="About me">
             <>
               <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                vero esse non molestias eos excepturi, inventore atque
-                cupiditate.
+                <p>
+                  Architect and Software Engineer, specialising in Marketing
+                  technologies, Composable Commerce, Content Management systems,
+                  Microservices, object-oriented analysis and design, patterns,
+                  and agile software development methodologies
+                </p>
               </div>
 
               <SidebarIconList />
@@ -71,26 +74,6 @@ const RightSidebar = (props: IMainProps) => (
                 </li>
               ))}
             </ul>
-          </SidebarBlock>
-
-          <SidebarBlock title="Newsletter">
-            <>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-                assumenda voluptatem.
-              </div>
-
-              <form className="mt-3">
-                <input
-                  className="w-full bg-white py-2 px-4 rounded appearance-none border border-gray-400 hover:border-gray-600 focus:outline-none focus:ring"
-                  placeholder="Enter your email address"
-                />
-
-                <button className="btn mt-3" type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </>
           </SidebarBlock>
         </div>
       </div>

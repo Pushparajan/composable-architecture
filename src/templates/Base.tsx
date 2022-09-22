@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 import { Footer } from '../footer/Footer';
 import { FooterBlocks } from '../footer/FooterBlocks';
-import { FooterIconList } from '../footer/FooterIconList';
-import { FooterThreeColumns } from '../footer/FooterThreeColumns';
+import { FooterTwoColumns } from '../footer/FooterTwoColumns';
 import { Navbar } from '../navigation/Navbar';
 
 type IMainProps = {
@@ -20,18 +19,8 @@ const Base = (props: IMainProps) => (
 
     <Navbar>
       <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/">
-          <a>Projects</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/">
-          <a>About</a>
+        <Link href="/posts/AboutMe">
+          <a>About Me</a>
         </Link>
       </li>
     </Navbar>
@@ -41,65 +30,26 @@ const Base = (props: IMainProps) => (
     {props.children}
 
     <Footer>
-      <FooterThreeColumns
+      <FooterTwoColumns
         block2={
-          <FooterBlocks title="Section title">
+          <FooterBlocks title="Links">
             <li>
               <Link href="/">
-                <a>Lorem ipsum 1</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 2</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 3</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 4</a>
+                <a>Home</a>
               </Link>
             </li>
           </FooterBlocks>
         }
         block3={
-          <FooterBlocks title="Section title">
+          <FooterBlocks title="Key Pages">
             <li>
-              <Link href="/">
-                <a>Lorem ipsum 1</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 2</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 3</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Lorem ipsum 4</a>
+              <Link href="/posts/AboutMe">
+                <a>Profile</a>
               </Link>
             </li>
           </FooterBlocks>
         }
-      >
-        <FooterBlocks title="About me">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugiat
-            molestias maiores, ab excepturi harum debitis blanditiis modi vel.
-          </div>
-
-          <FooterIconList />
-        </FooterBlocks>
-      </FooterThreeColumns>
+      ></FooterTwoColumns>
     </Footer>
   </div>
 );
