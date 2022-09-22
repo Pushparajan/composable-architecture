@@ -1,7 +1,8 @@
 export const AppConfig = {
-  site_name: 'Composable Architecture',
-  title: 'Composable Enterprise Architecture',
-  description: 'Discuss About Composable Microservices-Based Architectures',
+  site_name: 'Composable Architecture Distilled',
+  title: 'Composable Microservices-Based Architectures Distilled',
+  description:
+    'Find out how microservice-based architectures provide the foundation for composable commerce solutions',
   url: 'https://example.com',
   locale: 'en',
   author: 'Pushparajan Ramar',
