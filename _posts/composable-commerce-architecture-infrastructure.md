@@ -3,7 +3,7 @@ title: 'Composable Commerce Infrastructure'
 description: Various deployment models for Composable Commerce platforms, onprem, iaas, paas, saas, hybrid
 date: '2022-09-21'
 modified_date: '2022-09-21'
-image: /assets/images/posts/random-img-5.jpg
+image: /assets/images/posts/composable-infrastructure.jpg
 tags:
   - Composable Commerce
   - Infrastructure
