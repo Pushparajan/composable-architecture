@@ -3,7 +3,7 @@ title: 'Layers of Composable Architecture'
 description: Discuss the various architectural layers of composable software architectures
 date: '2020-09-25'
 modified_date: '2020-09-25'
-image: /assets/images/posts/composable-layers.jpg
+image: /assets/images/posts/composable-layers.png
 tags:
   - Composable Architecture
   - Layers
