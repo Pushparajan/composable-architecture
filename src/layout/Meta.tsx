@@ -25,6 +25,10 @@ const Meta = (props: IMetaProps) => {
       <Head>
         <meta charSet="UTF-8" key="charset" />
         <meta
+          name="google-site-verification"
+          content="mAdK8Y8a9YkxU1cF-TfFsOHOAnetXYgF-t-SGys8Udc"
+        />
+        <meta
           name="viewport"
           content="width=device-width,initial-scale=1"
           key="viewport"
