@@ -1,0 +1,29 @@
+<!-- public/sitemap.xml -->
+<xml version="1.0" encoding="UTF-8">
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://composable.pushparajan.com/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+    <url>
+      <loc>https://composable.pushparajan.com/posts/AboutMe/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+    <url>
+      <loc>https://composable.pushparajan.com/posts/composable-architectural-layers/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+    <url>
+      <loc>https://composable.pushparajan.com/posts/micro-frontends-for-composable-commerce-platforms/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+    <url>
+      <loc>https://composable.pushparajan.com/posts/composable-commerce-architecture-infrastructure/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+    <url>
+      <loc>https://composable.pushparajan.com/category/composable-architecture/</loc>
+      <lastmod>2022-10-02</lastmod>
+    </url>
+  </urlset>
+</xml>
