@@ -38,7 +38,7 @@ Multiple teams can work on the application independently to contribute to multip
 
 Each micro frontend should have a separate continuous delivery pipeline that builds, tests, and deploys it to production, regardless of how or where your frontend code is hosted. The developers can deploy each micro frontend without much consideration for the condition of other codebases or pipelines.
 
-### Simple, developed codebases
+### Simple, decoupled codebases
 
 As opposed to the source code of a single monolithic frontend, the source code for each micro frontend will, by definition, be substantially smaller. These smaller codebases typically have simpler, easier-to-use interfaces for developers. It avoids complexity, in particular, that results from the inadvertent and inappropriate coupling between components that shouldn't be aware of one another.
 
