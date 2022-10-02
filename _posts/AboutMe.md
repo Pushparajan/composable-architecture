@@ -1,12 +1,12 @@
 ---
-title: 'AboutMe'
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+title: 'About'
+description: Pushparajan Ramar Architect and Software Engineer, specialising in Marketing technologies, Composable Commerce, Content Management systems, Microservices, object-oriented analysis and design, patterns, and agile software development methodologies.
 date: '2020-09-20'
 modified_date: '2020-09-20'
 image: /assets/images/posts/random-img-2.jpg
 tags:
   - Profile
-  - About Me
+  - Pushparajan
 ---
 
 Strategic, business-focused Enterprise Architect specializes in Digital Experience Platforms,  more than 25+ years of IT Consulting experience.
