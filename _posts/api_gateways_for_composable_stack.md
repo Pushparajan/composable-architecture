@@ -3,7 +3,7 @@ title: 'API Gateways for Composable Stack'
 description: Discuss Cloud native options for selecting the right API Gateway in a Composable Architecture
 date: '2022-10-29'
 modified_date: '2022-10-29'
-image: /assets/images/posts/api_gateways_for_composable_stack.jpg
+image: /assets/images/posts/api_gateways_for_composable_stack.png
 tags:
   - Composable Architecture
   - API Gateway
