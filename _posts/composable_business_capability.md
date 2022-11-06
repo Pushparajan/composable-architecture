@@ -10,7 +10,7 @@ tags:
   - Packaged Business Capability
 ---
 
-Gone are the days businesses have had only two options build vs. buy or the combination of the two in some proportions. Companies do not have the time to change their technology platforms to adapt swiftly to change based on consumer needs. Though we have Microservices, native cloud applications, and established agile deliverable processes, the time to build is not fast enough to meet the changing requirements. Most lime businesses have bought monolith products to keep up with the time. 
+Gone are the days businesses have had only two options build vs. buy or the combination of the two in some proportions. Companies do not have the time to change their technology platforms to adapt swiftly to change based on consumer needs. Though we have Microservices, native cloud applications, and established agile deliverable processes, the time to build is not fast enough to meet the changing requirements. Most time businesses have bought monolith products to keep up with the time.
 
 The Monolith applications need to establish proper boundaries, and businesses pay two separate vendors for the same business capability. When custom building microservices to support the missing or weaker business capability ends up in multiple fine-grained applications. Right-sizing the business capability becomes an essence. "Package Business Capability" was the term Gartner named this solution. PBCs represent a clearly defined business feature functionally identifiable by a business user.  
 
