@@ -9,8 +9,7 @@ tags:
   - PBC
   - Packaged Business Capability
 ---
-Package Business Capabality
- 
+
 Gone are the days businesses have had only two options build vs. buy or the combination of the two in some proportions. Companies do not have the time to change their technology platforms to adapt swiftly to change based on consumer needs. Though we have Microservices, native cloud applications, and established agile deliverable processes, the time to build is not fast enough to meet the changing requirements. Most lime businesses have bought monolith products to keep up with the time. 
 
 The Monolith applications need to establish proper boundaries, and businesses pay two separate vendors for the same business capability. When custom building microservices to support the missing or weaker business capability ends up in multiple fine-grained applications. Right-sizing the business capability becomes an essence. "Package Business Capability" was the term Gartner named this solution. PBCs represent a clearly defined business feature functionally identifiable by a business user.  
@@ -23,24 +22,28 @@ Software vendors in this approach deliver fluid source pools of PBCs. Organizati
 
 In today's world, there are two types of vendors, one that provides PBCs built from the ground up with cloud-native standards and the existing monoliths that offer APIs for integrations. Business architects not only carefully assess the business capability requirements of the organizations but also watch out for the following,
 
-1) Domain Boundaries
+### 1) Domain Boundaries
 
 Software vendors often make quick adjustments to the products they already have with additional business capabilities that are not their core capability, like a commerce product with a content capability or a content product that offers search capability. Business Architects have to be watchful of the finer features of the product capability so that they pick the best-of-the-breed solution.
 
-2) API Driven and Orchestrated Assembly 
+### 2) API Driven and Orchestrated Assembly 
 
 A composable architecture that allows for simple reconfiguration enables dynamic structure and customization. 
 Modular-based, composable solutions must be innovative and adaptable because company needs vary over time. PBCs should provide discoverable interfaces so other PBCs can be connected or disconnected when needed. Most times, different countries or geographies have different complaint standards. The composable application should allow for seamless integrations.
 
-3) Event Driven Data Synchronization
+### 3) Event Driven Data Synchronization
+
 Microservices are architected to manage the data they need, providing the speed to perform and the agility to change. The context they hold is limited to the functions they provide. There are PBC that rely on other PBCs to offer better functionality. For example, consumers are looking for products in their local area. The search PBC needs to know their changing location information to provide an appropriate match. The Search PBC should be able to subscribe to changing location events of the consumer.
 
-4) Independently Deployable Business Capabilities
+### 4) Independently Deployable Business Capabilities
 
 In the current norm, PBCs are mostly SAAS products hosted on cloud infrastructure by the solution developers. Composable solution providers should provide more options to organizations evolving to modern composable architectures. 
 
-5) Multiple Experiences 
+### 5) Multiple Experiences
+
 User experiences come from different personas today, including developers, businesses, and consumers. The composable solution provider should provide an adequate interaction experience for all users. Users are not only working on the web or desktops, so the Experience platform should allow implementation of the experience omnichannel. Some DXPs are transforming to composability, Low code options like Salesforce Lightning are evolving, and so are Frontend as Service (FEaaS) platforms like Frontastic. The backend PBC should play well with the frontend experiences 
+
+## Conclusion
 
 Packaged Business capabilities reduce the complexity for the organizations that build the solutions and those that buy the solution. Vendors can quickly adapt to the changing business needs by implementing the functionality of the PBC they offer and staying the best of the breed. Organizations can easily compose an application that fits their business needs.
  
