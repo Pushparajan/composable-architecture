@@ -33,6 +33,6 @@ Setting up Composable Architectures is straightforward in green field implementa
 
 ## Conclusion
 
-Monoliths have evolved for many years now, which would take time to fix. It is a magic bullet to move to composable data architecture, yet with the PBCs and the new wave of MACH-based architectures, the composable market has tools that avoid rewriting a lot of code during this refactoring. 
+Monoliths have evolved for many years now, which would take time to fix. It is not a magic bullet to move to composable data architecture, yet with the PBCs and the new wave of MACH-based architectures, the composable market has tools that avoid rewriting a lot of code during this refactoring. 
 
 Change is the way of business, and keeping the applications flexible to meet business needs is a priority more than ever before. Event-Driven Microdatabases are a way to get to business agility and the same time, address data privacy and compliance issues.
