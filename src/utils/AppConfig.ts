@@ -3,7 +3,7 @@ export const AppConfig = {
   title: 'Composable Microservices-Based Architectures Distilled',
   description:
     'Find out how microservice-based architectures provide the foundation for composable commerce solutions',
-  url: 'https://example.com',
+  url: 'https://composable.pushparajan.com',
   locale: 'en',
   author: 'Pushparajan Ramar',
   pagination_size: 6,
