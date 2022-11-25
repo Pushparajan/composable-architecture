@@ -36,4 +36,4 @@ ACID Transactions are costly because all the related resources need to be locked
 
 ## Wrapping up
 
-Availability is a critical use case for seamless and compelling user experiences. Event-driven architectures are fueling the Composable Architecture drive across all industry sectors. Improvements in the streaming cloud-native applications are helping to reduce the time it takes to be eventually consistent in micro-milliseconds. Enabling API gateways on top of old IT systems is not enough to scale for today. Composable data architecture is a foundation for plug and play of composable packaged business capabilities.
+Availability is a critical use case for seamless and compelling user experiences. Event-driven architectures are fueling the Composable Architecture drive across all industry sectors. Improvements in the streaming cloud-native applications are helping to reduce the time it takes to be eventually consistent in micro-milliseconds. Enabling API gateways on top of old IT systems is not enough to scale for todays technology platforms. Composable data architecture is a foundation for plug and play of composable packaged business capabilities.
