@@ -3,7 +3,7 @@ title: 'Saga Pattern and achieving Eventual Data Consistency in Composable Data 
 description: Discuss on how to achieving Data Consistency across packed business capability with patterns like Saga in Composable Data Architecture 
 date: '2022-11-25'
 modified_date: '2022-11-25'
-image: /assets/images/posts/saga_pattern_composable_data_architecture.png
+image: /assets/images/posts/saga_pattern_composable_data_architecture.jpg
 tags:
   - Composable Architecture
   - Composable Data Architecture
