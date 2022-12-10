@@ -30,8 +30,9 @@ One should be clear that PIM is the system that provides the Single View or the 
 6. They help automate the publishing user documents, paper catalogs, and pdf technical datasheets. 
 7. They help integrate product data from product content services such as GS1, Icecat, CNET, and SKUvantage.
 
+
 ## Future is here
 
 Traditionally eCommerce systems like Hybris have bundled the product information capabilities partly. Different custom applications are required to manage the complete product life cycle. Traditional applications like inRiver or Informatica are still consistent. Yet synchronizing the data across systems with the batch processes is painful. 
 
-Event-Driven Microservices are the need for the day. Instead of waiting on batch processes that run multiple hours and days, the eventually synchronous data support more real-time information to consumers at the right moment. Open-source tools like Akeneo and SAAS products like Salsify provide this ability.
+Event-Driven Microservices are the need for the day. Instead of waiting on batch processes that run multiple hours and days, the eventually synchronous data support more real-time information to consumers at the right moment. Open-source tools like Akeneo and SAAS products like Salsify provide this ability. Interestingly there are multiple market place providers from Amazon to ebay to Etsy to Walmart. Syncronizing the product data and images across the market places require tools like Syndio, Prisync.
