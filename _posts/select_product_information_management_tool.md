@@ -3,7 +3,7 @@ title: 'Select a Product Information Management Tool for Exceptional Customer Ex
 description: Discuss on the key considerations to select the appropriate product information management too for the organization
 date: '2022-12-20'
 modified_date: '2022-12-20'
-image: /assets/images/posts/select_product_information_management_tool.jpg
+image: /assets/images/posts/select_product_information_management_tool.png
 tags:
   - Composable Architecture
   - Product Information Management
@@ -13,7 +13,7 @@ tags:
 
 A product is an article or substance manufactured or refined for sale. Product is the essence of any trade or commerce between the buyer and the seller. The product information is critical regardless of whether it is a consumer product directly consumed by the buyer or an Industrial product that goes through a manufacturing process. The Product design teams, the Engineering teams, the Manufacturing teams, the Suppliers of the Parts, the transportation teams, the storage locations, the sales associates, the marketing team, the payment providers, and the services team all contribute to the enrichment of the product information. Siloed product data in different systems for manufacturing (ERP, Inventory), the supply chain that provided the product parts,  sales and lead management (SCM) tools, customer service data (CRM), and digital marketing or experience platforms (DXP) end up complicating the product data accuracy. 
 
-## Supporting tools
+## Business Capabilities and Supporting tools
 
 Before selecting a PIM tool, I already have many acronyms and a few more to understand. All the below tools support Product Information Management (PIM) systems, and there is an overlap between the PIM products that provide these capabilities in the current market. 
 
