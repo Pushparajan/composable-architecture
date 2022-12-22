@@ -1,6 +1,6 @@
 ---
-title: 'Increase your customer lifetime value using the right Customer Data Platform'
-description: Discuss on features of Customer Data Platform (CDP) that can provide reliable customer information
+title: 'Determining Customer Lifetime Value with the right Customer Data Platform'
+description: Exploring the Features of Customer Data Platforms (CDPs) That Can Enhance Customer Loyalty through Reliable Customer Information
 date: '2022-12-22'
 modified_date: '2022-12-22'
 image: /assets/images/posts/customer_data_platform.png
