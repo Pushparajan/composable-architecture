@@ -1,5 +1,5 @@
 ---
-title: 'Increase your customer lifetime value by understanding your customer's needs using a Customer Data Platform'
+title: 'Increase your customer lifetime value by understanding your customers needs using a Customer Data Platform'
 description: Discuss on features of Customer Data Platform (CDP) that can provide reliable customer information
 date: '2022-12-22'
 modified_date: '2022-12-22'
