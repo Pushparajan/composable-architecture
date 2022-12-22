@@ -6,61 +6,53 @@ modified_date: '2022-12-22'
 image: /assets/images/posts/customer_data_platform.png
 tags:
   - Composable Architecture
-  - Product Information Management
-  - PIM
+  - Customer Data Platform
+  - CDP
   - Customer Experience
 ---
+In the digital age, when the customer has so many distractions, It is more critical to the buyer's budget or segment, the devices and digital touchpoints he can access, his shopping and payment preferences, and his purchase timeline. These details will help define the product's price and channels to engage him, provide optimal messaging without annoying and provide a frictionless checkout experience. In composable commerce, customer data is used by marketers to understand the accurate picture of their customers and create personalized and seamless shopping experiences across multiple channels and devices. To provide a seamless experience, marketers require data from many sources, including eCommerce platforms, social media, marketing tools, and analytics tools. When marketers have a realistic view of the customer, they can create personalized product recommendations based on their interests and preferences and segment customers based on their characteristics and behaviors to create targeted marketing campaigns. They can improve their customer service by providing more personalized and helpful support. Also, they can identify opportunities to improve the user experience and make their website or app more user-friendly and effective, which can ultimately increase customer engagement and loyalty,  sales, and revenue.
 
-A product is an article or substance manufactured or refined for sale. Product is the essence of any trade or commerce between the buyer and the seller. The product information is critical regardless of whether it is a consumer product directly consumed by the buyer or an Industrial product that goes through a manufacturing process. The Product design teams, the Engineering teams, the Manufacturing teams, the Suppliers of the Parts, the transportation teams, the storage locations, the sales associates, the marketing team, the payment providers, and the services team all contribute to the enrichment of the product information. Siloed product data in different systems for manufacturing (ERP, Inventory), the supply chain that provided the product parts,  sales and lead management (SCM) tools, customer service data (CRM), and digital marketing or experience platforms (DXP) end up complicating the product data accuracy. 
+However, challenges and risks are also associated with using customer data in composable commerce. One of the main challenges is managing and protecting customer data responsibly and ethically. Businesses must ensure that they comply with relevant local laws like the General Data Protection Regulation (GDPR) in the European Union and obtain customer consent before collecting and using their data.
 
-## Business Capabilities and Supporting tools
+Another challenge is the need to ensure that customer data is accurate and up-to-date. As customer data can come from a wide range of sources, it is essential to ensure that it is consistent and reliable.
 
-Before selecting a PIM tool, I already have many acronyms and a few more to understand. All the below tools support Product Information Management (PIM) systems, and there is an overlap between the PIM products that provide these capabilities in the current market. 
+## Core Business Capabilities of a customer data platform
 
-Master data management (MDM), Product Experience Management (PXM), Digital Asset management system (DAM), and Product data syndication (PDS) systems support the PIM platform.  
+Customer data platforms should provide data ingestion capabilities, i.e., the ability to ingest data from owned data sources (first-party data) and online and offline sources.
 
-Product Lifecycle Management (PLM) solutions help brands identify, innovate, and launch engineered products. They also track the product lifecycle and help remove underperforming products from the market.
+CDPs should be able to consolidate profiles at the person level and connect attributes to identities. The profile data has to be linked from data captured from various devices to a single individual once that person is identified and deduplicated to customer records.
 
-A Master Data Management (MDM) tool connects product information to places and people. It contains the product's SKU, name, description weight, dimensions, and parts/materials. 
+In digital marketing, marketers often need to group people within larger buyers who share specific characteristics or traits. Identifying and targeting particular buyer/audience segments can help businesses and marketers effectively tailor their messaging and marketing efforts to better resonate with particular groups of consumers. CDPs provide rule-based segments, automated segment discovery, predictive analytics and propensity models, and custom models.
 
-A Product Experience Management (PXM) tool improves the customer experience of the product information via contextual offerings and personalization. It stores the marketing message, product features, benefits, and cross-sell/upsell information. They also manage Product data syndication (PDS) with other systems like social channels, digital shelves, print catalogs, point of sale, and marketplaces.  
+Some CDPs have added advanced support for consent-based filtering, suppression, personalization, journey orchestration, A/B testing, and recommendations.
 
-Content Management systems (CMS) provide marketing descriptions and materials supporting sales and marketing teams. 
+## Additional Capabilities to consider in selecting a CDP platform
 
-The Digital Asset Management (DAM) platforms help maintain the product images, documentation, video, engineering drawings, and other digital assets related to the product.
+There are several factors you can consider when comparing customer data platforms (CDPs):
 
-Commerce Platforms help categorize the products in the stores, set up the pricing model, associate the shipping model, and provide the shopping cart and checkout experience.
+1. Ability to store, organize, and protect customer data.
 
-## Factors in selecting the PIM tool
+2. Ability to integrate with third-party data providers
 
-Firstly, A Microservices-based Composable Product information platform with headless architecture and event-driven synchronization can only provide such functionality in a scalable manner. Composable PIM tools offer flexibility, agility, time, and cost benefits and provide the flexibility to support changing business conditions.
+3. CDP should provide robust analytics and insights capabilities to make informed decisions about marketing and personalization efforts.
 
-The second important feature is that a product information system (PIM) should support event-driven data synchronization to provide consumers with the correct data at the appropriate time with the right message. The PIM aggregates the data and acts as the single source of product information for use in multichannel commerce and data exchange. 
+4. CDP should be able to provide personalized experiences to customers across channels, such as email, web, and mobile.
 
-Other factors in selecting a PIM, one should watch out for the following,
+5. CDP should provide tools to help marketers map out the customer journey, enabling marketers to understand how customers interact with the brand and identify opportunities for improvement.
 
-1. Setup product model based on the organization's product or service type
-2. Support different product hierarchies
-3. Support for product variants and SKUs
-4. Ability to version product attributes
-5. Support for catalog creation based on the stores and channels
-6. Model data flow from and to various supporting applications.
-7. Ability to capture data received from suppliers via global data syndication networks (GDSN).
-8. Support bulk import and export of product information
-9. Support import and export of partial streaming data
-10. Capture appropriate usage metrics of the product and analytics for key performance indicators.
-11. Collect Behavioural Data and digital shelf metrics
-12. Ability to cleanse and reconcile product data
-13. It should be scalable at peak traffic. 
-14. It should be observable during all times and alert appropriately.
-15. Support integration with DAM, CMS, Pricing, Orders, Inventory, and other supporting platforms
-16. Well-designed administrative UI
-17. Headless integration and publishing to multiple digital and offline channels
-18. Support conversational commerce
-19. Personalization, Contextualization, and automation via ML/AI
-20. Natural language generation (NLG) abilities to generate rich content
+6. CDP can integrate with other marketing and customer-facing systems, such as your email marketing platform or customer relationship management (CRM) system.
 
-## PIM Market place
+7. CDPs should be able to support consent management.
 
-Currently, there are multiple PIM tools with the unique and same time, overlapping business capabilities. Organizations must select a tool that helps in creating a frictionless checkout process. With predefined template-based experiences, the flexibility to make the 1-1 experience is jeopardized. A headless PIM architecture provides the flexibility and agility that allows organizations to provide a dynamic experience. The cloud-native headless products are Pimcore, Akeneo, BetterCommerce, Salsify, Bluestone PIM, censhare, Unbxd, Inriver, and others. Some products cover the entire spectrum, some focus on syndication only, and some with their niche. When choosing the appropriate tool, it is best to consider the organization's business context and current capabilities.  
+8. Provide a data science workbench, so data scientists within the organization can build custom predictive models.
+
+9. CDPs should integrate with Identity management platforms.
+
+10. CDPs should be able to clean the profile data and establish an identity graph.
+
+11. With CDPs, Marketers should be able to create organizational aggregations of contacts to support account-based marketing.
+
+12. CDPs should provide a recommendation engine that can provide intelligence to nonmarketing channels such as call centers or live chat agents.
+
+Overall, customer data is valuable in composable commerce, but businesses must manage and use it responsibly and ethically. There are many customer data platforms (CDPs), including, Segment, Tealium AudienceStream, BlueConic, Lytics, Treasure Data, and Adobe Realtime CDP. It's important to carefully evaluate different CDPs' features and capabilities to determine the best fit for your organization's needs.
 
