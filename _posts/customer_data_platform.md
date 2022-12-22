@@ -1,6 +1,6 @@
 ---
 title: 'Increase your customer lifetime value by understanding your customer's needs using a Customer Data Platform'
-description: In any commerce, sellers must understand the buyer's needs and how their product can meet them. Only if the seller knows the buyer's requirements can they highlight the features and benefits of the product and make a pitch. Customer Data Platform (CDP) acts as a single source of truth of basic data (CRM), interaction data (Pageviews, ebook downloads, social shares, email inquiries, and demo requests), behavioral data (prior purchases, billing systems), and attitudinal data (Reviews and Surveys). How do we pick the CDP that can provide reliable customer information?
+description: Discuss on features of Customer Data Platform (CDP) that can provide reliable customer information
 date: '2022-12-22'
 modified_date: '2022-12-22'
 image: /assets/images/posts/customer_data_platform.png
