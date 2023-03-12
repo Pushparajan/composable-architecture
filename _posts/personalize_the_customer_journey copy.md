@@ -25,15 +25,16 @@ The function-based architecture also enables developers to build applications in
 There are various serverless computing platforms available for developers today, including,
 
 1. Many companies and organizations, including Netflix, Airbnb, Lyft, and Expedia, use AWS Lambda for various use cases, such as serverless data processing, event-driven computing, and real-time stream processing. AWS Lambda supports Node.js, Python, Java, and .NET programming languages
-Companies such as Siemens, and Heineken use Microsoft Azure Functions for predictive maintenance and real-time industrial equipment monitoring.
 
-2. Google Cloud Functions is used by companies such as Coca-Cola, Ubisoft, and Philips to automate their sales data processing, while Ubisoft uses it for their game serverless backend infrastructure. GCP supports Node.js, Python, and Go programming languages.
+2. Companies such as Siemens, and Heineken use Microsoft Azure Functions for predictive maintenance and real-time industrial equipment monitoring.
 
-3. Fidelity uses IBM Cloud Functions for their financial functions, while The Weather Company processes its weather data. Companies like H&R Block also use IBM Cloud Functions. IBM Cloud Functions supports Node.js, Python, Java, and Swift programming languages
+3. Google Cloud Functions is used by companies such as Coca-Cola, Ubisoft, and Philips to automate their sales data processing, while Ubisoft uses it for their game serverless backend infrastructure. GCP supports Node.js, Python, and Go programming languages.
 
-4. Adobe uses Apache OpenWhisk for its cloud services, like Adobe Experience Platform, and companies like Red Hat. OpenWhisk supports programming languages like Node.js, Python, Java, and Swift.
+4. Fidelity uses IBM Cloud Functions for their financial functions, while The Weather Company processes its weather data. Companies like H&R Block also use IBM Cloud Functions. IBM Cloud Functions supports Node.js, Python, Java, and Swift programming languages
 
-5. There is more adaptation to newer tools like Zeit Now. Zeit Now is used by companies such as Lyft, Coca-Cola, and Airbnb. Lyft uses Zeit Now for its real-time data processing, Coca-Cola uses it for its sales data processing, and Airbnb uses it for its serverless backend infrastructure. Zeit Now supports Node.js, Python, and Go programming languages
+5. Adobe uses Apache OpenWhisk for its cloud services, like Adobe Experience Platform, and companies like Red Hat. OpenWhisk supports programming languages like Node.js, Python, Java, and Swift.
+
+6. There is more adaptation to newer tools like Zeit Now. Zeit Now is used by companies such as Lyft, Coca-Cola, and Airbnb. Lyft uses Zeit Now for its real-time data processing, Coca-Cola uses it for its sales data processing, and Airbnb uses it for its serverless backend infrastructure. Zeit Now supports Node.js, Python, and Go programming languages
 
 Though there is a fast adoption in various domains, weigh-in the benefits with the concern areas. The following are the few key concern areas when looking at implementing an FBA solution,
 
