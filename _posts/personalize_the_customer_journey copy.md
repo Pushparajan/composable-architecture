@@ -25,7 +25,7 @@ The function-based architecture also enables developers to build applications in
 There are various serverless computing platforms available for developers today, including,
 
 1. Many companies and organizations, including Netflix, Airbnb, Lyft, and Expedia, use AWS Lambda for various use cases, such as serverless data processing, event-driven computing, and real-time stream processing. AWS Lambda supports Node.js, Python, Java, and .NET programming languages
-Companies such as Siemens, Accenture, and Heineken use Microsoft Azure Functions for predictive maintenance and real-time industrial equipment monitoring.
+Companies such as Siemens, and Heineken use Microsoft Azure Functions for predictive maintenance and real-time industrial equipment monitoring.
 
 2. Google Cloud Functions is used by companies such as Coca-Cola, Ubisoft, and Philips to automate their sales data processing, while Ubisoft uses it for their game serverless backend infrastructure. GCP supports Node.js, Python, and Go programming languages.
 
