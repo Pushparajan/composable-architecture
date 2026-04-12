@@ -1,6 +1,6 @@
 ---
 title: 'VPC Design Patterns for Composable Commerce: Isolation Without Friction'
-description: The reference subnet topology for multi-tier composable platforms, Security Groups vs NACLs defence-in-depth, VPC Endpoints for keeping PBC traffic private, and Transit Gateway for multi-team deployments.
+description: "The reference subnet topology for multi-tier composable platforms, Security Groups vs NACLs defence-in-depth, VPC Endpoints for keeping PBC traffic private, and Transit Gateway for multi-team deployments."
 date: '2024-02-05'
 modified_date: '2024-02-05'
 image: /assets/images/posts/vpc-network-design.jpg

@@ -1,6 +1,6 @@
 ---
 title: 'Securing 15 Services at Once: The Security Architecture of Composable Commerce'
-description: Defence-in-depth across six independent layers, WAF rules tuned for composable storefronts, the Payment PBC PCI isolation pattern, IMDSv2 enforcement, and CloudTrail as incident response infrastructure.
+description: "Defence-in-depth across six independent layers, WAF rules tuned for composable storefronts, the Payment PBC PCI isolation pattern, IMDSv2 enforcement, and CloudTrail as incident response infrastructure."
 date: '2024-04-01'
 modified_date: '2024-04-01'
 image: /assets/images/posts/security-architecture.jpg

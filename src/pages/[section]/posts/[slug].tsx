@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { format } from 'date-fns';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -34,42 +34,90 @@ type IPostProps = {
   categoryCollection: [string, PostItems[]][];
 };
 
-const DisplayPost = (props: IPostProps) => (
-  <RightSidebar
-    meta={
-      <Meta
-        title={props.title}
-        description={props.description}
-        post={{
-          image: props.image,
-          date: props.date,
-          modified_date: props.modified_date,
-        }}
-      />
-    }
-    hero={
-      <Hero
-        title={props.title}
-        description={`By ${AppConfig.author} · ${format(
-          new Date(props.date),
-          'LLLL d, yyyy'
-        )}`}
-      />
-    }
-    recentPosts={props.recentPosts}
-    categoryCollection={props.categoryCollection}
-    section={props.section.slug}
-  >
-    <ContentBorder>
-      <Content>
-        <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: props.content }}
+const DisplayPost = (props: IPostProps) => {
+  useEffect(() => {
+    // Load mermaid from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+    script.async = true;
+    script.onload = () => {
+      // @ts-ignore
+      const { mermaid } = window;
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+      });
+
+      // Find all mermaid code blocks and render them
+      const codeBlocks = document.querySelectorAll('code.language-mermaid');
+      codeBlocks.forEach(async (block, index) => {
+        const pre = block.parentElement;
+        if (!pre) return;
+
+        const code = block.textContent || '';
+        const id = `mermaid-${index}`;
+
+        try {
+          const { svg } = await mermaid.render(id, code);
+          const wrapper = document.createElement('div');
+          wrapper.className = 'mermaid-diagram';
+          wrapper.innerHTML = svg;
+          pre.replaceWith(wrapper);
+        } catch (e) {
+          // Keep original code block if rendering fails
+          // eslint-disable-next-line no-console
+          console.error('Mermaid rendering failed:', e);
+        }
+      });
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, [props.content]);
+
+  return (
+    <RightSidebar
+      meta={
+        <Meta
+          title={props.title}
+          description={props.description}
+          post={{
+            image: props.image,
+            date: props.date,
+            modified_date: props.modified_date,
+          }}
         />
-      </Content>
-    </ContentBorder>
-  </RightSidebar>
-);
+      }
+      hero={
+        <Hero
+          title={props.title}
+          description={`By ${AppConfig.author} · ${format(
+            new Date(props.date),
+            'LLLL d, yyyy'
+          )}`}
+        />
+      }
+      recentPosts={props.recentPosts}
+      categoryCollection={props.categoryCollection}
+      section={props.section.slug}
+    >
+      <ContentBorder>
+        <Content>
+          <div
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: props.content }}
+          />
+        </Content>
+      </ContentBorder>
+    </RightSidebar>
+  );
+};
 
 export const getStaticPaths: GetStaticPaths<IPostUrl> = async () => {
   const paths: { params: IPostUrl }[] = [];

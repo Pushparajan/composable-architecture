@@ -1,6 +1,6 @@
 ---
 title: 'Ten Architecture Principles That Separate Great Composable Platforms from Expensive Distributed Monoliths'
-description: The synthesis of the entire series: designing for unpredictable failure, the stateless PBC constraint, security as infrastructure, polyglot persistence, and why the composable migration is an architecture not a project.
+description: "The synthesis of the entire series: designing for unpredictable failure, the stateless PBC constraint, security as infrastructure, polyglot persistence, and why the composable migration is an architecture not a project."
 date: '2024-04-15'
 modified_date: '2024-04-15'
 image: /assets/images/posts/architecture-best-practices.jpg

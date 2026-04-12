@@ -1,6 +1,6 @@
 ---
 title: 'One Platform, Three Databases: RDS, DynamoDB and Redshift in Composable Commerce'
-description: Polyglot persistence for composable PBCs — Aurora for Order Management, DynamoDB for Cart and Session, Redshift as the cross-PBC analytics layer, and the data ownership contract that keeps PBCs truly independent.
+description: "Polyglot persistence for composable PBCs - Aurora for Order Management, DynamoDB for Cart and Session, Redshift as the cross-PBC analytics layer, and the data ownership contract that keeps PBCs truly independent."
 date: '2024-02-26'
 modified_date: '2024-02-26'
 image: /assets/images/posts/databases-polyglot.jpg

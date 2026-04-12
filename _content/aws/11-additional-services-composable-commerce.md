@@ -1,6 +1,6 @@
 ---
 title: 'The Infrastructure Glue: CloudFront, Kinesis and CloudFormation for Composable Commerce'
-description: CloudFront cache behaviours per PBC path, Kinesis Streams for real-time personalisation signals, Kinesis Firehose for the analytics pipeline, and CloudFormation as the deployment contract between platform and PBC teams.
+description: "CloudFront cache behaviours per PBC path, Kinesis Streams for real-time personalisation signals, Kinesis Firehose for the analytics pipeline, and CloudFormation as the deployment contract between platform and PBC teams."
 date: '2024-03-25'
 modified_date: '2024-03-25'
 image: /assets/images/posts/cloudfront-kinesis-cloudformation.jpg

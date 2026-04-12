@@ -14,4 +14,12 @@
   @apply outline-none ring;
 }
 
+.mermaid-diagram {
+  @apply my-6 flex justify-center;
+}
+
+.mermaid-diagram svg {
+  @apply max-w-full h-auto;
+}
+
 @tailwind utilities;

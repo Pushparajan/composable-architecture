@@ -49,6 +49,14 @@ export const AppConfig = {
         'AWS cloud architecture patterns, best practices, and solutions',
       contentDir: '_content/aws',
     },
+    {
+      name: 'Adobe',
+      slug: 'adobe',
+      title: 'Adobe Experience Cloud',
+      description:
+        'Adobe Experience Platform, AEM, Analytics, Target, and Marketing technologies',
+      contentDir: '_content/adobe',
+    },
   ] as SectionConfig[],
   getSectionBySlug(slug: string): SectionConfig | undefined {
     return this.sections.find((s) => s.slug === slug);

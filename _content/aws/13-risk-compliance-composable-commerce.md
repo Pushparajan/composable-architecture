@@ -1,6 +1,6 @@
 ---
 title: 'AWS Compliance for Composable Commerce: What You Inherit and What You Still Own'
-description: The three-layer responsibility model for composable platforms, AWS Artifact for QSA evidence, Config auto-remediation rules, and GDPR right-to-erasure implemented as a cross-PBC cascade.
+description: "The three-layer responsibility model for composable platforms, AWS Artifact for QSA evidence, Config auto-remediation rules, and GDPR right-to-erasure implemented as a cross-PBC cascade."
 date: '2024-04-08'
 modified_date: '2024-04-08'
 image: /assets/images/posts/compliance-governance.jpg
