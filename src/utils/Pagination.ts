@@ -12,9 +12,13 @@ export function convertTo2D<T>(arr: T[], size: number) {
   return res;
 }
 
-export function convertUrlToLinkHref(url: string) {
-  if (url === '/') {
-    return '/';
+export function convertUrlToLinkHref(url: string, section?: string) {
+  if (url === '/' || url === `/${section}`) {
+    return section ? '/[section]' : '/';
+  }
+
+  if (section) {
+    return '/[section]/[page]';
   }
 
   return '/[page]';

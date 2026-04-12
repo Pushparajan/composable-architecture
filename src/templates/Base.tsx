@@ -6,6 +6,7 @@ import { Footer } from '../footer/Footer';
 import { FooterBlocks } from '../footer/FooterBlocks';
 import { FooterTwoColumns } from '../footer/FooterTwoColumns';
 import { Navbar } from '../navigation/Navbar';
+import { AppConfig } from '../utils/AppConfig';
 
 type IMainProps = {
   meta: ReactNode;
@@ -18,11 +19,13 @@ const Base = (props: IMainProps) => (
     {props.meta}
 
     <Navbar>
-      <li>
-        <Link href="/posts/AboutMe">
-          <a>About Me</a>
-        </Link>
-      </li>
+      {AppConfig.sections.map((section) => (
+        <li key={section.slug}>
+          <Link href={`/${section.slug}`}>
+            <a>{section.name}</a>
+          </Link>
+        </li>
+      ))}
     </Navbar>
 
     {props.hero}
@@ -32,19 +35,21 @@ const Base = (props: IMainProps) => (
     <Footer>
       <FooterTwoColumns
         block2={
-          <FooterBlocks title="Links">
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
+          <FooterBlocks title="Sections">
+            {AppConfig.sections.map((section) => (
+              <li key={section.slug}>
+                <Link href={`/${section.slug}`}>
+                  <a>{section.name}</a>
+                </Link>
+              </li>
+            ))}
           </FooterBlocks>
         }
         block3={
-          <FooterBlocks title="Key Pages">
+          <FooterBlocks title="Quick Links">
             <li>
-              <Link href="/posts/AboutMe">
-                <a>Profile</a>
+              <Link href="/">
+                <a>Home</a>
               </Link>
             </li>
           </FooterBlocks>

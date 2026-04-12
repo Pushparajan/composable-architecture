@@ -7,6 +7,7 @@ import { BlogCard } from './BlogCard';
 export type IBlogGalleryProps = {
   posts: PostItems[];
   pagination?: IPaginationProps;
+  section?: string;
 };
 
 const BlogGallery = (props: IBlogGalleryProps) => (
@@ -21,6 +22,7 @@ const BlogGallery = (props: IBlogGalleryProps) => (
           image={elt.image}
           slug={elt.slug}
           tags={elt.tags}
+          section={props.section}
         />
       ))}
     </div>
@@ -29,6 +31,7 @@ const BlogGallery = (props: IBlogGalleryProps) => (
       <Pagination
         previous={props.pagination.previous}
         next={props.pagination.next}
+        section={props.section}
       />
     )}
   </>

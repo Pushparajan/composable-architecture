@@ -10,11 +10,19 @@ type IBlogCardProps = {
   image: string;
   slug: string;
   tags: string[];
+  section?: string;
 };
 
 const BlogCard = (props: IBlogCardProps) => (
   <div className="max-w-sm rounded-lg overflow-hidden bg-white shadow-sm mx-auto transform hover:shadow-xl hover:-translate-y-1">
-    <Link href="/posts/[slug]" as={`/posts/${props.slug}`}>
+    <Link
+      href={props.section ? '/[section]/posts/[slug]' : '/posts/[slug]'}
+      as={
+        props.section
+          ? `/${props.section}/posts/${props.slug}`
+          : `/posts/${props.slug}`
+      }
+    >
       <a className="flex flex-col h-full">
         <img
           className="w-full"

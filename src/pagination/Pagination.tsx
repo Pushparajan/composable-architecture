@@ -7,38 +7,50 @@ import { convertUrlToLinkHref } from '../utils/Pagination';
 export type IPaginationProps = {
   previous?: string;
   next?: string;
+  prev?: string;
+  section?: string;
 };
 
-const Pagination = (props: IPaginationProps) => (
-  <div className="pt-8 flex justify-center">
-    {props.previous && (
-      <div className="mx-3">
-        <Link href={convertUrlToLinkHref(props.previous)} as={props.previous}>
-          <a>← Newer Posts</a>
-        </Link>
-      </div>
-    )}
+const Pagination = (props: IPaginationProps) => {
+  const previous = props.previous || props.prev;
 
-    {props.next && (
-      <div className="mx-3">
-        <Link href={convertUrlToLinkHref(props.next)} as={props.next}>
-          <a>Older Posts →</a>
-        </Link>
-      </div>
-    )}
+  return (
+    <div className="pt-8 flex justify-center">
+      {previous && (
+        <div className="mx-3">
+          <Link
+            href={convertUrlToLinkHref(previous, props.section)}
+            as={previous}
+          >
+            <a>← Newer Posts</a>
+          </Link>
+        </div>
+      )}
 
-    <style jsx>
-      {`
-        a {
-          @apply text-blue-600;
-        }
+      {props.next && (
+        <div className="mx-3">
+          <Link
+            href={convertUrlToLinkHref(props.next, props.section)}
+            as={props.next}
+          >
+            <a>Older Posts →</a>
+          </Link>
+        </div>
+      )}
 
-        a:hover {
-          @apply border-b-2 border-blue-600;
-        }
-      `}
-    </style>
-  </div>
-);
+      <style jsx>
+        {`
+          a {
+            @apply text-blue-600;
+          }
+
+          a:hover {
+            @apply border-b-2 border-blue-600;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
 
 export { Pagination };

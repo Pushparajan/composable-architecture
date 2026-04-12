@@ -14,6 +14,7 @@ type IMainProps = {
   recentPosts?: PostItems[];
   categoryCollection: [string, PostItems[]][];
   children: ReactNode;
+  section?: string;
 };
 
 const RightSidebar = (props: IMainProps) => (
@@ -43,7 +44,18 @@ const RightSidebar = (props: IMainProps) => (
               <ul>
                 {props.recentPosts.map((elt) => (
                   <li key={elt.slug} className="my-4">
-                    <Link href="/posts/[slug]" as={`/posts/${elt.slug}`}>
+                    <Link
+                      href={
+                        props.section
+                          ? '/[section]/posts/[slug]'
+                          : '/posts/[slug]'
+                      }
+                      as={
+                        props.section
+                          ? `/${props.section}/posts/${elt.slug}`
+                          : `/posts/${elt.slug}`
+                      }
+                    >
                       <a className="text-blue-600 hover:border-b-2 hover:border-blue-600">
                         {elt.title}
                       </a>
@@ -62,8 +74,16 @@ const RightSidebar = (props: IMainProps) => (
                   className="py-4 border-b border-gray-400 last:border-none"
                 >
                   <Link
-                    href="/category/[name]"
-                    as={`/category/${convertToSlug(elt[0])}`}
+                    href={
+                      props.section
+                        ? '/[section]/category/[name]'
+                        : '/category/[name]'
+                    }
+                    as={
+                      props.section
+                        ? `/${props.section}/category/${convertToSlug(elt[0])}`
+                        : `/category/${convertToSlug(elt[0])}`
+                    }
                   >
                     <a className="flex justify-between hover:text-gray-600">
                       <div>{elt[0]}</div>
