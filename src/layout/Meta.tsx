@@ -57,6 +57,13 @@ const Meta = (props: IMetaProps) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${AppConfig.site_name} RSS Feed`}
+          href={`${AppConfig.url}/rss.xml`}
+          key="rss"
+        />
         <title>{`${props.title} | ${AppConfig.site_name}`}</title>
         <meta
           name="description"
