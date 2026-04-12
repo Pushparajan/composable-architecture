@@ -104,6 +104,7 @@ export default async function handler(
       jobsCreated,
     });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Publish hook error:', error);
     res.status(500).json({
       success: false,
