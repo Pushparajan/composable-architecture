@@ -3,7 +3,7 @@ title: 'SQS, SNS and the Event-Driven Backbone of Composable Commerce'
 description: "The order-placed fan-out pattern, visibility timeout as a reliability contract, Dead Letter Queues as revenue alerts, idempotent consumers, and SNS for zero-code PBC subscription extensibility."
 date: '2024-03-04'
 modified_date: '2024-03-04'
-image: /assets/images/posts/event-driven-messaging.jpg
+image: /assets/images/posts/event-driven-messaging.png
 tags:
   - Composable Commerce
   - AWS

@@ -3,7 +3,7 @@ title: 'AWS for Composable Commerce: The Complete Architecture Series'
 description: "A full 14-article series mapping every major AWS service to composable commerce PBC design - infrastructure, security, data, and messaging patterns for MACH architects."
 date: '2024-01-08'
 modified_date: '2024-01-08'
-image: /assets/images/posts/aws-composable-series.jpg
+image: /assets/images/posts/aws-composable-series.png
 tags:
   - Composable Commerce
   - AWS

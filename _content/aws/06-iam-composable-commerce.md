@@ -3,7 +3,7 @@ title: 'Zero-Trust Between Your Own Services: IAM for Composable Commerce'
 description: "One IAM role per PBC, eliminating credentials from code, cross-PBC SigV4 authorisation patterns, Secrets Manager auto-rotation, and blast radius containment through least-privilege design."
 date: '2024-02-19'
 modified_date: '2024-02-19'
-image: /assets/images/posts/iam-security.jpg
+image: /assets/images/posts/iam-security.png
 tags:
   - Composable Commerce
   - AWS

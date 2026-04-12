@@ -3,7 +3,7 @@ title: 'The Elasticity Engine: ELB, CloudWatch and Auto Scaling for Composable C
 description: "ALB path-based routing for PBC dispatch, business-level CloudWatch metrics beyond CPU, per-PBC Auto Scaling strategies, and connection draining for zero-downtime composable deployments."
 date: '2024-02-12'
 modified_date: '2024-02-12'
-image: /assets/images/posts/elasticity-autoscaling.jpg
+image: /assets/images/posts/elasticity-autoscaling.png
 tags:
   - Composable Commerce
   - AWS

@@ -3,7 +3,7 @@ title: 'S3 Is the Silent Infrastructure of Every Composable Commerce Platform'
 description: "How Amazon S3 and Glacier function as the shared asset backbone across PBCs - from pre-signed URL patterns and lifecycle policies to cross-region replication and compliance archiving."
 date: '2024-01-22'
 modified_date: '2024-01-22'
-image: /assets/images/posts/s3-object-storage.jpg
+image: /assets/images/posts/s3-object-storage.png
 tags:
   - Composable Commerce
   - AWS

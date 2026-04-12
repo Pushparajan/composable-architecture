@@ -3,7 +3,7 @@ title: 'Why Composable Commerce Starts With AWS Global Infrastructure'
 description: "How AWS Regions, Availability Zones, and Edge Locations form the reliability substrate for MACH-based composable commerce platforms - and why Region selection is an architectural decision, not a deployment detail."
 date: '2024-01-15'
 modified_date: '2024-01-15'
-image: /assets/images/posts/aws-global-infrastructure.jpg
+image: /assets/images/posts/aws-global-infrastructure.png
 tags:
   - Composable Commerce
   - AWS

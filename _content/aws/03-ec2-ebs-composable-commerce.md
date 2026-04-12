@@ -3,7 +3,7 @@ title: "Sizing EC2 for Composable Commerce: Why Your PBCs Don't All Need the Sam
 description: "Instance family selection, golden AMI deployment contracts, Reserved vs Spot pricing strategies, and the stateless PBC imperative - the compute decisions that drive cost and resilience."
 date: '2024-01-29'
 modified_date: '2024-01-29'
-image: /assets/images/posts/ec2-compute.jpg
+image: /assets/images/posts/ec2-compute.png
 tags:
   - Composable Commerce
   - AWS

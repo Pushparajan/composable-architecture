@@ -3,7 +3,7 @@ title: 'ElastiCache: Making 15 API Calls Feel Like One to the Shopper'
 description: "Cache-aside per PBC with versioned keys, TTL as a business decision, Redis data structures for sessions and flash-sale inventory counters, atomic operations, and Multi-AZ failover for session continuity."
 date: '2024-03-18'
 modified_date: '2024-03-18'
-image: /assets/images/posts/elasticache-redis.jpg
+image: /assets/images/posts/elasticache-redis.png
 tags:
   - Composable Commerce
   - AWS

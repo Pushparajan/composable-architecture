@@ -3,7 +3,7 @@ title: 'Route 53 as the Global Traffic Director for Your Composable Commerce Pla
 description: "Alias records at the zone apex, all five routing policies mapped to composable commerce requirements, health checks that test business readiness not just ports, and GDPR compliance through geolocation routing."
 date: '2024-03-11'
 modified_date: '2024-03-11'
-image: /assets/images/posts/route53-dns.jpg
+image: /assets/images/posts/route53-dns.png
 tags:
   - Composable Commerce
   - AWS
