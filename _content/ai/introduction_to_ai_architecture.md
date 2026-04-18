@@ -1,9 +1,9 @@
 ---
-title: 'Introduction to AI Architecture'
-date: '2024-01-16T00:00:00.000Z'
-modified_date: '2024-01-16T00:00:00.000Z'
-description: 'Explore the fundamental concepts of AI and ML system architectures'
-image: '/assets/images/posts/readme.html'
+title: "Introduction to AI Architecture"
+description: "Explore the fundamental concepts of AI and ML system architectures"
+date: "2024-01-16"
+modified_date: "2024-01-16"
+image: /assets/images/posts/introduction_to_ai_architecture.png
 tags:
   - AI
   - Machine Learning

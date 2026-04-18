@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Pushparajan Ramar - Architect and Software Engineer specializing in Digital Marketing Technologies, Composable Commerce, Content Management Systems, Microservices, and Agile Software Development."
+description: "Pushparajan Ramar - Architect and Software Engineer specializing in AI, Digital Marketing Technologies, Composable Commerce, Content Management Systems, Microservices, and Agile Software Development."
 date: "2020-09-20"
 modified_date: "2020-09-20"
 image: /assets/images/posts/random-img-2.jpg
@@ -68,7 +68,7 @@ An analytical, detail-oriented, and systematic professional with a strong track 
 ## 🎓 Education & Background
 
 - 🎓 Graduate in **Computer Science**
-- 💼 Started career as a **J2EE Developer**, evolving into an Enterprise Architect
+- 💼 Started career as a **J2EE Developer**, evolving into an Technology Leader
 
 ---
 
@@ -83,6 +83,7 @@ An analytical, detail-oriented, and systematic professional with a strong track 
 
 ## 🧩 Core Strengths
 
+- Applied AI
 - Composable Architecture & API-first design  
 - Martech & Digital Transformation Strategy  
 - Enterprise Integration & Microservices  
@@ -93,4 +94,4 @@ An analytical, detail-oriented, and systematic professional with a strong track 
 
 ## 📌 Summary
 
-A forward-thinking architect who bridges **business strategy and technology execution**, enabling organizations to achieve **scalable, composable, and customer-centric digital ecosystems**.
+A forward-thinking Technology Srategist who bridges **business strategy and technology execution**, enabling organizations to achieve **scalable, composable, and customer-centric digital ecosystems**.
