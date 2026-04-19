@@ -11,9 +11,16 @@ type INavbarProps = {
 const Navbar = (props: INavbarProps) => (
   <div className="w-full bg-gray-800">
     <div className="navbar max-w-screen-xl flex flex-wrap justify-between items-center py-4 px-3 mx-auto">
-      <div className="font-extrabold text-xl">
+      <div className="font-extrabold text-xl flex items-center">
         <Link href="/">
-          <a>{AppConfig.site_name}</a>
+          <a className="flex items-center">
+            <img
+              src="/assets/images/posts/favicon-32x32.png"
+              alt={AppConfig.site_name}
+              className="w-8 h-8 mr-2"
+            />
+            {AppConfig.site_name}
+          </a>
         </Link>
       </div>
 
