@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { format } from 'date-fns';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
+import { ImageModal } from '../../../components/ImageModal';
 import { Content } from '../../../content/Content';
 import { ContentBorder } from '../../../content/ContentBorder';
 import { Hero } from '../../../hero/Hero';
@@ -35,6 +36,11 @@ type IPostProps = {
 };
 
 const DisplayPost = (props: IPostProps) => {
+  const [modalImage, setModalImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
   useEffect(() => {
     // Load mermaid from CDN
     const script = document.createElement('script');
@@ -81,6 +87,35 @@ const DisplayPost = (props: IPostProps) => {
     };
   }, [props.content]);
 
+  // Make content images clickable for modal
+  useEffect(() => {
+    const contentDiv = document.querySelector('.content');
+    if (!contentDiv) return undefined;
+
+    const handleImageClick = (e: Event) => {
+      const target = e.target as HTMLImageElement;
+      if (target.tagName === 'IMG') {
+        setModalImage({
+          src: target.src,
+          alt: target.alt || props.title,
+        });
+      }
+    };
+
+    contentDiv.addEventListener('click', handleImageClick);
+
+    // Add cursor pointer to all images
+    const images = contentDiv.querySelectorAll('img');
+    images.forEach((img) => {
+      // eslint-disable-next-line no-param-reassign
+      img.style.cursor = 'pointer';
+    });
+
+    return () => {
+      contentDiv.removeEventListener('click', handleImageClick);
+    };
+  }, [props.content, props.title]);
+
   return (
     <RightSidebar
       meta={
@@ -108,13 +143,39 @@ const DisplayPost = (props: IPostProps) => {
       section={props.section.slug}
     >
       <ContentBorder>
+        {/* Main article image */}
+        {props.image && (
+          <button
+            type="button"
+            onClick={() =>
+              setModalImage({ src: props.image, alt: props.title })
+            }
+            className="w-full mb-8 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent rounded-lg overflow-hidden"
+          >
+            <img
+              src={props.image}
+              alt={props.title}
+              className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
+          </button>
+        )}
         <Content>
           <div
+            className="content"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: props.content }}
           />
         </Content>
       </ContentBorder>
+
+      {/* Image modal */}
+      {modalImage && (
+        <ImageModal
+          src={modalImage.src}
+          alt={modalImage.alt}
+          onClose={() => setModalImage(null)}
+        />
+      )}
     </RightSidebar>
   );
 };

@@ -22,4 +22,59 @@
   @apply max-w-full h-auto;
 }
 
+/* Sidebar styles */
+.sidebar-title {
+  @apply text-lg font-bold text-gray-800 mb-4;
+}
+
+.sidebar-section {
+  @apply pb-6 border-b border-gray-200;
+}
+
+.newsletter-box {
+  @apply pb-6 border-b border-gray-200;
+}
+
+/* Screen reader only - for SEO H1 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Accent color utility */
+.text-accent {
+  color: #0070ad;
+}
+
+.hover\:text-accent:hover {
+  color: #0070ad;
+}
+
+.text-dark {
+  color: #1a202c;
+}
+
+.bg-accent {
+  background-color: #0070ad;
+}
+
+.hover\:bg-accent-dark:hover {
+  background-color: #005a8c;
+}
+
+.border-accent {
+  border-color: #0070ad;
+}
+
+.focus\:ring-accent:focus {
+  --tw-ring-color: #0070ad;
+}
+
 @tailwind utilities;

@@ -19,9 +19,20 @@ type IIndexProps = {
 
 const Index = (props: IIndexProps) => (
   <Base
-    meta={<Meta title={AppConfig.title} description={AppConfig.description} />}
+    meta={
+      <Meta
+        title="Applied AI, Machine Learning, Composable Architecture & Digital Transformation"
+        description="Expert insights on Applied AI, Artificial Intelligence, Machine Learning, Loyalty platforms, Marketing Technology, and Digital Transformation architecture"
+      />
+    }
     hero={<Hero title={AppConfig.title} description={AppConfig.description} />}
   >
+    {/* Hidden H1 for SEO */}
+    <h1 className="sr-only">
+      Applied AI, Artificial Intelligence, Machine Learning, Loyalty, Marketing
+      Technology, and Digital Transformation Architecture Knowledge Hub
+    </h1>
+
     <div className="w-full bg-gray-100">
       <div className="max-w-screen-xl py-16 mx-auto flex flex-wrap">
         <div className="w-full md:w-2/3 px-3">

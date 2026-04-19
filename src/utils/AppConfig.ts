@@ -14,6 +14,21 @@ export const AppConfig = {
   url: 'https://composable.pushparajan.com',
   locale: 'en',
   author: 'Pushparajan Ramar',
+  twitterHandle: '@pushparajan',
+  keywords: [
+    'Applied AI',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Loyalty',
+    'Marketing Technology',
+    'Digital Transformation',
+    'Composable Architecture',
+    'Microservices',
+    'Enterprise Architecture',
+    'TOGAF',
+    'AWS',
+    'Cloud Architecture',
+  ],
   pagination_size: 6,
   post_fields: ['title', 'description', 'date', 'image', 'tags', 'slug'],
   sections: [
@@ -22,7 +37,7 @@ export const AppConfig = {
       slug: 'composablearchitecture',
       title: 'Composable Microservices-Based Architectures Distilled',
       description:
-        'Find out how microservice-based architectures provide the foundation for composable commerce solutions',
+        'Find out how microservice-based architectures provide the foundation for composable commerce solutions and digital transformation',
       contentDir: '_content/composablearchitecture',
     },
     {
@@ -30,31 +45,31 @@ export const AppConfig = {
       slug: 'togaf',
       title: 'TOGAF Enterprise Architecture Framework',
       description:
-        'Learn about The Open Group Architecture Framework for enterprise architecture',
+        'Learn about The Open Group Architecture Framework for enterprise architecture and digital transformation',
       contentDir: '_content/togaf',
     },
     {
       name: 'AI',
       slug: 'ai',
-      title: 'Artificial Intelligence & Machine Learning',
+      title: 'Applied AI, Artificial Intelligence & Machine Learning',
       description:
-        'Explore AI and ML architectures, patterns, and implementations',
+        'Explore Applied AI, Machine Learning architectures, loyalty platforms, marketing technology, and AI implementations',
       contentDir: '_content/ai',
     },
     {
       name: 'AWS',
       slug: 'aws',
-      title: 'Amazon Web Services Architecture',
+      title: 'Amazon Web Services Cloud Architecture',
       description:
-        'AWS cloud architecture patterns, best practices, and solutions',
+        'AWS cloud architecture patterns, best practices, and solutions for digital transformation',
       contentDir: '_content/aws',
     },
     {
       name: 'Adobe',
       slug: 'adobe',
-      title: 'Adobe Experience Cloud',
+      title: 'Adobe Experience Cloud & Marketing Technology',
       description:
-        'Adobe Experience Platform, AEM, Analytics, Target, and Marketing technologies',
+        'Adobe Experience Platform, AEM, Analytics, Target, and Marketing technologies for digital transformation',
       contentDir: '_content/adobe',
     },
   ] as SectionConfig[],

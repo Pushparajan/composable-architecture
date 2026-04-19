@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 
 import Link from 'next/link';
 
-import { SidebarBlock } from '../sidebar/SidebarBlock';
+import { NewsletterForm } from '../components/NewsletterForm';
 import { SidebarIconList } from '../sidebar/SidebarIconList';
 import { PostItems } from '../utils/Content';
 import { convertToSlug } from '../utils/Url';
@@ -17,88 +17,126 @@ type IMainProps = {
   section?: string;
 };
 
-const RightSidebar = (props: IMainProps) => (
-  <Base meta={props.meta} hero={props.hero}>
-    <div className="w-full bg-gray-100">
-      <div className="max-w-screen-xl py-16 mx-auto flex flex-wrap">
-        <div className="w-full md:w-2/3 md:px-3">{props.children}</div>
+const RightSidebar = (props: IMainProps) => {
+  useEffect(() => {
+    // Load AddToAny script
+    const script = document.createElement('script');
+    script.src = 'https://static.addtoany.com/menu/page.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-        <div className="w-full md:w-1/3 px-3">
-          <SidebarBlock title="About me">
-            <>
-              <div>
-                <p>
-                  Architect and Software Engineer, specialising in Marketing
-                  technologies, Composable Commerce, Content Management systems,
-                  Microservices, object-oriented analysis and design, patterns,
-                  and agile software development methodologies
-                </p>
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
+  return (
+    <Base meta={props.meta} hero={props.hero}>
+      <div className="w-full bg-white">
+        <div className="max-w-screen-xl py-8 md:py-12 mx-auto flex flex-wrap px-6">
+          <main className="w-full lg:w-2/3 lg:pr-16">{props.children}</main>
+
+          <aside className="w-full lg:w-1/3 mt-12 lg:mt-0 lg:border-l lg:border-gray-200 lg:pl-12">
+            <div className="sticky top-8">
+              {/* Share buttons */}
+              <div className="mb-8 pb-6 border-b border-gray-200">
+                <h3 className="sidebar-title">Share</h3>
+                <div
+                  className="a2a_kit a2a_kit_size_32 a2a_default_style"
+                  data-a2a-icon-color="transparent,#0070ad"
+                >
+                  <a className="a2a_button_facebook" />
+                  <a className="a2a_button_x" />
+                  <a className="a2a_button_linkedin" />
+                  <a className="a2a_button_reddit" />
+                  <a className="a2a_button_email" />
+                  <a className="a2a_button_copy_link" />
+                </div>
               </div>
 
-              <SidebarIconList />
-            </>
-          </SidebarBlock>
+              {/* Newsletter signup */}
+              <div className="newsletter-box mb-8">
+                <h3 className="sidebar-title">Newsletter</h3>
+                <p className="text-gray-600 mb-4">
+                  Useful tips on composable architecture, delivered once a week.
+                </p>
+                <NewsletterForm layout="horizontal" />
+              </div>
 
-          {props.recentPosts && (
-            <SidebarBlock title="Recent posts">
-              <ul>
-                {props.recentPosts.map((elt) => (
-                  <li key={elt.slug} className="my-4">
+              {/* About */}
+              <div className="sidebar-section mb-8">
+                <h3 className="sidebar-title">About</h3>
+                <p className="text-gray-600 text-sm">
+                  Architect and Software Engineer, specialising in Marketing
+                  technologies, Composable Commerce, Content Management systems.
+                </p>
+                <SidebarIconList />
+              </div>
+
+              {/* Recent posts */}
+              {props.recentPosts && (
+                <div className="sidebar-section mb-8">
+                  <h3 className="sidebar-title">Recent Posts</h3>
+                  <ul className="space-y-3">
+                    {props.recentPosts.map((elt) => (
+                      <li key={elt.slug}>
+                        <Link
+                          href={
+                            props.section
+                              ? '/[section]/posts/[slug]'
+                              : '/posts/[slug]'
+                          }
+                          as={
+                            props.section
+                              ? `/${props.section}/posts/${elt.slug}`
+                              : `/posts/${elt.slug}`
+                          }
+                        >
+                          <a className="text-dark hover:text-accent transition-colors text-sm leading-snug block">
+                            {elt.title}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Categories */}
+              <div className="sidebar-section">
+                <h3 className="sidebar-title">Categories</h3>
+                <div className="flex flex-wrap gap-2">
+                  {props.categoryCollection.map((elt) => (
                     <Link
+                      key={elt[0]}
                       href={
                         props.section
-                          ? '/[section]/posts/[slug]'
-                          : '/posts/[slug]'
+                          ? '/[section]/category/[name]'
+                          : '/category/[name]'
                       }
                       as={
                         props.section
-                          ? `/${props.section}/posts/${elt.slug}`
-                          : `/posts/${elt.slug}`
+                          ? `/${props.section}/category/${convertToSlug(
+                              elt[0]
+                            )}`
+                          : `/category/${convertToSlug(elt[0])}`
                       }
                     >
-                      <a className="text-blue-600 hover:border-b-2 hover:border-blue-600">
-                        {elt.title}
+                      <a className="text-sm text-gray-600 hover:text-accent transition-colors">
+                        {elt[0]}
                       </a>
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </SidebarBlock>
-          )}
-
-          <SidebarBlock title="Categories">
-            <ul>
-              {props.categoryCollection.map((elt) => (
-                <li
-                  key={elt[0]}
-                  className="py-4 border-b border-gray-400 last:border-none"
-                >
-                  <Link
-                    href={
-                      props.section
-                        ? '/[section]/category/[name]'
-                        : '/category/[name]'
-                    }
-                    as={
-                      props.section
-                        ? `/${props.section}/category/${convertToSlug(elt[0])}`
-                        : `/category/${convertToSlug(elt[0])}`
-                    }
-                  >
-                    <a className="flex justify-between hover:text-gray-600">
-                      <div>{elt[0]}</div>
-
-                      <div>{elt[1].length}</div>
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </SidebarBlock>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </div>
-  </Base>
-);
+    </Base>
+  );
+};
 
 export { RightSidebar };

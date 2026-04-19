@@ -19,6 +19,8 @@ type IMetaProps = {
 
 const Meta = (props: IMetaProps) => {
   const router = useRouter();
+  const canonicalUrl =
+    props.canonical || `${AppConfig.url}${addTrailingSlash(router.asPath)}`;
 
   return (
     <>
@@ -33,6 +35,12 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+        <meta
+          name="keywords"
+          content={AppConfig.keywords.join(', ')}
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
         <link
           rel="apple-touch-icon"
           href={`${router.basePath}/apple-touch-icon.png`}
@@ -64,6 +72,7 @@ const Meta = (props: IMetaProps) => {
           href={`${AppConfig.url}/rss.xml`}
           key="rss"
         />
+        <link rel="canonical" href={canonicalUrl} key="canonical" />
         <title>{`${props.title} | ${AppConfig.site_name}`}</title>
         <meta
           name="description"
@@ -73,9 +82,44 @@ const Meta = (props: IMetaProps) => {
           key="description"
         />
         <meta name="author" content={AppConfig.author} key="author" />
-        {props.canonical && (
-          <link rel="canonical" href={props.canonical} key="canonical" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta
+          name="twitter:card"
+          content={props.post ? 'summary_large_image' : 'summary'}
+          key="twitter:card"
+        />
+        <meta
+          name="twitter:site"
+          content={AppConfig.twitterHandle}
+          key="twitter:site"
+        />
+        <meta
+          name="twitter:creator"
+          content={AppConfig.twitterHandle}
+          key="twitter:creator"
+        />
+        <meta
+          name="twitter:title"
+          content={`${props.title} | ${AppConfig.title}`}
+          key="twitter:title"
+        />
+        <meta
+          name="twitter:description"
+          content={
+            props.description ? props.description : AppConfig.description
+          }
+          key="twitter:description"
+        />
+        {props.post && (
+          <meta
+            name="twitter:image"
+            content={`${AppConfig.url}${router.basePath}${props.post.image}`}
+            key="twitter:image"
+          />
         )}
+
+        {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
           content={`${props.title} | ${AppConfig.title}`}
@@ -94,6 +138,48 @@ const Meta = (props: IMetaProps) => {
           content={AppConfig.site_name}
           key="og:site_name"
         />
+        <meta property="og:url" content={canonicalUrl} key="og:url" />
+
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: AppConfig.site_name,
+              url: AppConfig.url,
+              logo: `${AppConfig.url}/assets/images/logo.png`,
+              sameAs: [
+                'https://twitter.com/pushparajan',
+                'https://www.linkedin.com/in/pushparajan/',
+              ],
+            }),
+          }}
+          key="org-schema"
+        />
+
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: AppConfig.site_name,
+              url: AppConfig.url,
+              description: AppConfig.description,
+              author: {
+                '@type': 'Person',
+                name: AppConfig.author,
+              },
+            }),
+          }}
+          key="website-schema"
+        />
+
         {props.post && (
           <>
             <meta property="og:type" content="article" key="og:type" />
@@ -101,11 +187,6 @@ const Meta = (props: IMetaProps) => {
               property="og:image"
               content={`${AppConfig.url}${router.basePath}${props.post.image}`}
               key="og:image"
-            />
-            <meta
-              name="twitter:card"
-              content="summary_large_image"
-              key="twitter:card"
             />
             <meta
               property="article:published_time"
@@ -121,43 +202,36 @@ const Meta = (props: IMetaProps) => {
               type="application/ld+json"
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
-                __html: `
-          {
-            "description": "${
-              props.description ? props.description : AppConfig.description
-            }",
-            "author": {
-              "@type": "Person",
-              "name": "${AppConfig.author}"
-            },
-            "@type": "BlogPosting",
-            "url": "${AppConfig.url}${router.basePath}${addTrailingSlash(
-                  router.asPath
-                )}",
-            "publisher": {
-              "@type": "Organization",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "${AppConfig.url}${
-                  router.basePath
-                }/assets/images/logo.png"
-              },
-              "name": "${AppConfig.author}"
-            },
-            "headline": "${props.title} | ${AppConfig.title}",
-            "image": ["${AppConfig.url}${router.basePath}${props.post.image}"],
-            "datePublished": "${new Date(props.post.date).toISOString()}",
-            "dateModified": "${new Date(
-              props.post.modified_date
-            ).toISOString()}",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "${AppConfig.url}${router.basePath}${addTrailingSlash(
-                  router.asPath
-                )}"
-            },
-            "@context": "http://schema.org"
-          }`,
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'BlogPosting',
+                  headline: `${props.title} | ${AppConfig.title}`,
+                  description: props.description || AppConfig.description,
+                  image: [
+                    `${AppConfig.url}${router.basePath}${props.post.image}`,
+                  ],
+                  datePublished: new Date(props.post.date).toISOString(),
+                  dateModified: new Date(
+                    props.post.modified_date
+                  ).toISOString(),
+                  author: {
+                    '@type': 'Person',
+                    name: AppConfig.author,
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: AppConfig.site_name,
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: `${AppConfig.url}${router.basePath}/assets/images/logo.png`,
+                    },
+                  },
+                  mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': canonicalUrl,
+                  },
+                  url: canonicalUrl,
+                }),
               }}
               key="ldjson"
             />

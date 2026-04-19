@@ -3,8 +3,6 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 
 import { Footer } from '../footer/Footer';
-import { FooterBlocks } from '../footer/FooterBlocks';
-import { FooterTwoColumns } from '../footer/FooterTwoColumns';
 import { Navbar } from '../navigation/Navbar';
 import { AppConfig } from '../utils/AppConfig';
 
@@ -32,30 +30,7 @@ const Base = (props: IMainProps) => (
 
     {props.children}
 
-    <Footer>
-      <FooterTwoColumns
-        block2={
-          <FooterBlocks title="Sections">
-            {AppConfig.sections.map((section) => (
-              <li key={section.slug}>
-                <Link href={`/${section.slug}`}>
-                  <a>{section.name}</a>
-                </Link>
-              </li>
-            ))}
-          </FooterBlocks>
-        }
-        block3={
-          <FooterBlocks title="Quick Links">
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-          </FooterBlocks>
-        }
-      ></FooterTwoColumns>
-    </Footer>
+    <Footer />
   </div>
 );
 
