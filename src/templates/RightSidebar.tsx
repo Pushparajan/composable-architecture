@@ -3,7 +3,6 @@ import React, { ReactNode, useEffect } from 'react';
 import Link from 'next/link';
 
 import { NewsletterForm } from '../components/NewsletterForm';
-import { SidebarIconList } from '../sidebar/SidebarIconList';
 import { PostItems } from '../utils/Content';
 import { convertToSlug } from '../utils/Url';
 import { Base } from './Base';
@@ -63,16 +62,6 @@ const RightSidebar = (props: IMainProps) => {
                   Useful tips on composable architecture, delivered once a week.
                 </p>
                 <NewsletterForm layout="horizontal" />
-              </div>
-
-              {/* About */}
-              <div className="sidebar-section mb-8">
-                <h3 className="sidebar-title">About</h3>
-                <p className="text-gray-600 text-sm">
-                  Architect and Software Engineer, specialising in Marketing
-                  technologies, Composable Commerce, Content Management systems.
-                </p>
-                <SidebarIconList />
               </div>
 
               {/* Recent posts */}

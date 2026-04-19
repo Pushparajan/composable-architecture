@@ -3,7 +3,7 @@ title: "About"
 description: "Pushparajan Ramar — VP of Engineering / CTO specializing in AI/ML Strategy, Enterprise Architecture, Digital Transformation, and Engineering Organization Scaling."
 date: "2020-09-20"
 modified_date: "2025-01-01"
-image: /assets/images/posts/random-img-2.jpg
+image: /assets/images/posts/pushparajan-profile.png
 tags:
   - Profile
   - Pushparajan

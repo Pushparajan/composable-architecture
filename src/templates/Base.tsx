@@ -24,6 +24,11 @@ const Base = (props: IMainProps) => (
           </Link>
         </li>
       ))}
+      <li>
+        <Link href="/composablearchitecture/posts/AboutMe">
+          <a>About Me</a>
+        </Link>
+      </li>
     </Navbar>
 
     {props.hero}

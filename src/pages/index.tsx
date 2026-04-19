@@ -59,6 +59,11 @@ const Index = (props: IIndexProps) => (
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: props.aboutContent }}
               />
+              <Link href="/composablearchitecture/posts/AboutMe">
+                <a className="inline-block mt-4 text-accent hover:underline font-medium">
+                  Read More &rarr;
+                </a>
+              </Link>
               <SidebarIconList />
             </>
           </SidebarBlock>
@@ -75,8 +80,18 @@ export const getStaticProps: GetStaticProps<IIndexProps> = async () => {
     'composablearchitecture'
   );
 
-  const aboutContent = aboutPost
-    ? await markdownToHtml(aboutPost.content || '')
+  // Extract only the first section (Overview) for the blurb - roughly 10 lines
+  let truncatedContent = '';
+  if (aboutPost?.content) {
+    const lines = aboutPost.content.split('\n');
+    // Find the first horizontal rule and take content before it, limit to 10 lines
+    const hrIndex = lines.findIndex((line) => line.trim() === '---');
+    const contentLines = hrIndex > 0 ? lines.slice(0, hrIndex) : lines;
+    truncatedContent = contentLines.slice(0, 10).join('\n');
+  }
+
+  const aboutContent = truncatedContent
+    ? await markdownToHtml(truncatedContent)
     : '';
 
   return {

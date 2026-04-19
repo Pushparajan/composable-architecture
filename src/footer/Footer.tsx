@@ -28,6 +28,13 @@ const Footer = () => (
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/composablearchitecture/posts/AboutMe">
+                <a className="text-gray-400 hover:text-white text-sm transition-colors">
+                  About Me
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
 
