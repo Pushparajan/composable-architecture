@@ -11,7 +11,7 @@ export const AppConfig = {
   title: 'Architecture Knowledge Hub',
   description:
     'Explore composable architectures, TOGAF, AI, and AWS best practices',
-  url: 'https://composable.pushparajan.com',
+  url: 'https://pushparajan.tech',
   locale: 'en',
   author: 'Pushparajan Ramar',
   twitterHandle: '@pushparajan',

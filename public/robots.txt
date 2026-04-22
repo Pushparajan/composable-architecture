@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://composable.pushparajan.com/sitemap.xml
+Sitemap: https://pushparajan.tech/sitemap.xml
