@@ -72,6 +72,14 @@ export const AppConfig = {
         'Adobe Experience Platform, AEM, Analytics, Target, and Marketing technologies for digital transformation',
       contentDir: '_content/adobe',
     },
+    {
+      name: 'Content Supply Chain',
+      slug: 'contentsupplychain',
+      title: 'Content Supply Chain',
+      description:
+        'Planning, production, governance, and measurement across the enterprise content supply chain',
+      contentDir: '_content/ContentSupplyChain',
+    },
   ] as SectionConfig[],
   getSectionBySlug(slug: string): SectionConfig | undefined {
     return this.sections.find((s) => s.slug === slug);

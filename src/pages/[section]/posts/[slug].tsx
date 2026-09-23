@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { ImageModal } from '../../../components/ImageModal';
+import { PdfEmbed } from '../../../components/PdfEmbed';
 import { Content } from '../../../content/Content';
 import { ContentBorder } from '../../../content/ContentBorder';
 import { Hero } from '../../../hero/Hero';
@@ -30,6 +31,7 @@ type IPostProps = {
   date: string;
   modified_date: string;
   image: string;
+  pdf?: string | null;
   content: string;
   recentPosts: PostItems[];
   categoryCollection: [string, PostItems[]][];
@@ -166,6 +168,12 @@ const DisplayPost = (props: IPostProps) => {
             dangerouslySetInnerHTML={{ __html: props.content }}
           />
         </Content>
+        {props.pdf && (
+          <Content>
+            <h2>Carousel</h2>
+            <PdfEmbed src={props.pdf} title={props.title} />
+          </Content>
+        )}
       </ContentBorder>
 
       {/* Image modal */}
@@ -218,6 +226,7 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       'date',
       'modified_date',
       'image',
+      'pdf',
       'content',
       'slug',
     ],
@@ -234,6 +243,9 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
     section.slug
   ).slice(0, 5);
 
+  // Frontmatter `pdf` is typed as string | string[] by PostItems; only a single PDF is supported
+  const pdf = Array.isArray(post.pdf) ? post.pdf[0] ?? null : post.pdf ?? null;
+
   return {
     props: {
       section,
@@ -242,6 +254,7 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       date: post.date,
       modified_date: post.modified_date,
       image: post.image,
+      pdf,
       content,
       recentPosts,
       categoryCollection: getCategoryCollection(['slug', 'tags'], section.slug),
