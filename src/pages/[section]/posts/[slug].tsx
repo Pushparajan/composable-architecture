@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { format } from 'date-fns';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Link from 'next/link';
 
 import { ImageModal } from '../../../components/ImageModal';
 import { PdfEmbed } from '../../../components/PdfEmbed';
@@ -16,12 +17,18 @@ import {
   getPostBySlug,
   PostItems,
   getCategoryCollection,
+  getAdjacentPosts,
 } from '../../../utils/Content';
 import { markdownToHtml } from '../../../utils/Markdown';
 
 type IPostUrl = {
   section: string;
   slug: string;
+};
+
+type IAdjacentPost = {
+  slug: string;
+  title: string;
 };
 
 type IPostProps = {
@@ -33,6 +40,8 @@ type IPostProps = {
   image: string;
   pdf?: string | null;
   content: string;
+  previousPost: IAdjacentPost | null;
+  nextPost: IAdjacentPost | null;
   recentPosts: PostItems[];
   categoryCollection: [string, PostItems[]][];
 };
@@ -174,6 +183,34 @@ const DisplayPost = (props: IPostProps) => {
             <PdfEmbed src={props.pdf} title={props.title} />
           </Content>
         )}
+        {(props.previousPost || props.nextPost) && (
+          <nav className="flex items-center justify-between gap-4 mt-8 pt-6 border-t border-gray-200">
+            {props.previousPost ? (
+              <Link
+                href="/[section]/posts/[slug]"
+                as={`/${props.section.slug}/posts/${props.previousPost.slug}`}
+              >
+                <a className="text-sm text-dark hover:text-accent transition-colors">
+                  ← {props.previousPost.title}
+                </a>
+              </Link>
+            ) : (
+              <span />
+            )}
+            {props.nextPost ? (
+              <Link
+                href="/[section]/posts/[slug]"
+                as={`/${props.section.slug}/posts/${props.nextPost.slug}`}
+              >
+                <a className="text-sm text-dark hover:text-accent transition-colors text-right">
+                  {props.nextPost.title} →
+                </a>
+              </Link>
+            ) : (
+              <span />
+            )}
+          </nav>
+        )}
       </ContentBorder>
 
       {/* Image modal */}
@@ -229,6 +266,7 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       'pdf',
       'content',
       'slug',
+      'tags',
     ],
     section.slug
   );
@@ -245,6 +283,8 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
 
   // Frontmatter `pdf` is typed as string | string[] by PostItems; only a single PDF is supported
   const pdf = Array.isArray(post.pdf) ? post.pdf[0] ?? null : post.pdf ?? null;
+  const tags = Array.isArray(post.tags) ? post.tags : [];
+  const { previous, next } = getAdjacentPosts(post.slug, tags, section.slug);
 
   return {
     props: {
@@ -256,6 +296,10 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       image: post.image,
       pdf,
       content,
+      previousPost: previous
+        ? { slug: previous.slug, title: previous.title }
+        : null,
+      nextPost: next ? { slug: next.slug, title: next.title } : null,
       recentPosts,
       categoryCollection: getCategoryCollection(['slug', 'tags'], section.slug),
     },

@@ -123,3 +123,30 @@ export function getCategoryCollection(fields: string[] = [], section?: string) {
 export function getAllSections() {
   return AppConfig.sections;
 }
+
+// Sibling posts are those in the same section sharing at least one tag, ordered by slug
+export function getAdjacentPosts(
+  slug: string,
+  tags: string[] = [],
+  section?: string
+): { previous: PostItems | null; next: PostItems | null } {
+  if (tags.length === 0) {
+    return { previous: null, next: null };
+  }
+
+  const siblings = getAllPosts(['slug', 'title', 'tags'], section)
+    .filter((post) => post.tags?.some((tag) => tags.includes(tag)))
+    .sort((post1, post2) => post1.slug.localeCompare(post2.slug));
+
+  const currentIndex = siblings.findIndex((post) => post.slug === slug);
+
+  if (currentIndex === -1) {
+    return { previous: null, next: null };
+  }
+
+  return {
+    previous: currentIndex > 0 ? siblings[currentIndex - 1] : null,
+    next:
+      currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null,
+  };
+}
